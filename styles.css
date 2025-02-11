@@ -1,0 +1,103 @@
+/* Estilo básico para el body */
+body {
+    background-color: #252323;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Estilo del título principal */
+h1 {
+    color: white;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%; /* Asegura que el título ocupa todo el ancho disponible */
+}
+
+/* Contenedor principal */
+#container {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo de los canvases */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 3px solid;
+}
+
+/* Menú de pausa y de Game Over centrado */
+#menu-pause,
+#menu-game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   /*  transform: translate(-50%, -50%); */
+    width: 250px;
+    background-color: rgba(0, 0, 128, 0.6);
+    border-radius: 8px;
+    padding: 15px 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Asegurar que "Game Over" y "Score" estén alineados correctamente */
+#menu-game-over h1,
+#menu-game-over h2 {
+    text-align: center; /* Alinea el texto en el centro */
+    color: white;
+    margin: 10px auto;
+}
+
+/* Lista de opciones del menú */
+.menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    display: block;
+    margin: 10px auto;
+    background-color: rgba(0, 0, 180, 0.7);
+    color: white;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #00F;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.menu-items li:hover {
+    background-color: rgba(0, 0, 128, 1);
+}
+
+/* Diseño responsive */
+@media (max-width: 400px) {
+    #container {
+        width: 90%;
+        height: auto;
+    }
+
+    #menu-pause, #menu-game-over {
+        width: 90%;
+    }
+
+    .menu-items li {
+        width: 90%;
+    }
+}
